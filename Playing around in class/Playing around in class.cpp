@@ -25,6 +25,9 @@ class Animal {
 		cout << "Yummy, the animal likes" << food << endl; 
 	}
 
+	void animal() {
+		cout << "Animal has been created" << endl; 
+	}
 }
 
 
