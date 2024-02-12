@@ -15,15 +15,6 @@ public:
 	string Noise;
 
 
-	Animal(string SpeciesVal, string NameVal, string ColourVal, int AgeVal, int WeightVal, string NoiseVal) {
-		Species = SpeciesVal;
-		Name = NameVal;
-		Colour = ColourVal;
-		Age = AgeVal;
-		Weight = WeightVal;
-		Noise = NoiseVal;
-	}
-
 	void sayHello() {
 		cout << "Hiii, I am " << Name << endl;
 	}
@@ -36,8 +27,19 @@ public:
 		cout << "Yummy, " << Name <<  " likes " << food << endl;
 	}
 
-	void animal() {
+	//Default constructor to display the required message
+	Animal() {
 		cout << "Animal has been created" << endl;
+	}
+
+	// Parameterised Constructor to set the value of each data members
+	Animal(string SpeciesVal, string NameVal, string ColourVal, int AgeVal, int WeightVal, string NoiseVal) {
+		Species = SpeciesVal;
+		Name = NameVal;
+		Colour = ColourVal;
+		Age = AgeVal;
+		Weight = WeightVal;
+		Noise = NoiseVal;
 	}
 
 
@@ -46,6 +48,8 @@ public:
 
 
 int main(){
+	Animal;
+
 	Animal Cat("British Short hair", "Milo", "Ginger", 2, 10, "meowwww");
 
 	Cat.sayHello(); 
