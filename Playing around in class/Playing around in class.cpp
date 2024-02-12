@@ -6,7 +6,6 @@ using namespace std;
 
 //Creating the Animal class
 class Animal {
-public:
 	string Species;
 	string Name;
 	string Colour;
@@ -25,20 +24,20 @@ public:
 	}
 
 	void sayHello() {
-		cout << "The animal's name is" << Name << endl;
+		cout << "The animal's name is " << Name << endl;
 	}
 
 	void makeNoise() {
-		cout << "The animal goes" << Noise << endl;
+		cout << "The animal goes " << Noise << endl;
 	}
 
 	void eat(string food) {
-		cout << "Yummy, the animal likes" << food << endl;
+		cout << "Yummy, the animal likes " << food << endl;
 	}
 
-	void animal() {
-		cout << "Animal has been created" << endl;
-	}
+	//void animal() {
+	//	cout << "Animal has been created" << endl;
+	//}
 
 
 };
@@ -46,7 +45,7 @@ public:
 
 
 int main(){
-	Animal Cat("British Short hair", "Milo", "Ginger", "2", "10", "meowwww");
+	Animal Cat("British Short hair", "Milo", "Ginger", 2, 10, "meowwww");
 
 	Cat.sayHello(); 
 	Cat.makeNoise(); 
