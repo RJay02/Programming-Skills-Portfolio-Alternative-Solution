@@ -45,12 +45,19 @@ public:
 
 };
 
+int choice;
+	cout << "Main Menu" << endl; 
+	cout << "Pick an animal" << endl; 
+	cout << "Enter a number" << endl; 
+	cin >> choice; 
 
 
 int main(){
-	Animal;
+	Animal animal;
 
-	Animal Cat("British Short hair", "Milo", "Ginger", 2, 10, "meowwww");
+	// Instantiating at least two objects
+	Animal Cat("British Shorthair", "Milo", "Ginger", 2, 10, "meowwww");
+	Animal Dog("German Shepherd", "Simba", "Black & Tan", 5, 15, "barkkk");
 
 	Cat.sayHello(); 
 	Cat.makeNoise(); 
