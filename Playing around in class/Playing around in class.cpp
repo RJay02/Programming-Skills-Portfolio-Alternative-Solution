@@ -14,15 +14,17 @@ public:
 	int Weight;
 	string Noise;
 
-
+	//To output the animal name
 	void sayHello() {
 		cout << "Hiii, I am " << Name << endl;
 	}
 
+	//To output the animal noise 
 	void makeNoise() {
 		cout << Name << " goes " << Noise << endl;
 	}
 
+	//To output specified food passed 
 	void eat(string food) {
 		cout << "Yummy, " << Name <<  " likes " << food << endl;
 	}
@@ -51,7 +53,7 @@ int main(){
 
 	// Instantiating at least two objects
 	Animal Cat("British Shorthair", "Milo", "Ginger", 2, 10, "meowwww");
-	Animal Dog("German Shepherd", "Simba", "Black & Tan", 5, 15, "barkkk");
+	Animal Dog("German Shepherd", "Simba", "Black & Tan", 5, 15, "woof woof");
 
 	Cat.sayHello(); 
 	Cat.makeNoise(); 
@@ -59,13 +61,15 @@ int main(){
 
 
 	int choice;
+	// Creating a simple menu to interact with animal objects
 	cout << "Main Menu" << endl;
 	cout << "Pick an animal" << endl;
 	cout << "1. Cat" << endl; 
 	cout << "2. Dog" << endl; 
-	cout << "Enter a number to choose an animal: ";
+	cout << "Enter a number (1-2) to choose an animal: ";
 	cin >> choice;
 
+	// If statements to show interaction menu depending on user choice 
 	if (choice == 1){
 		int choice2; 
 		cout << "Sub Menu" << endl; 
@@ -83,8 +87,9 @@ int main(){
 			Cat.makeNoise(); 
 		}
 		else if (choice2 == 3) {
-			cout << "Details for" << Cat.Name << endl; 
-			cout << "Species: " << Cat.Species << endl; 
+			cout << "Details for the cat " << endl; 
+			cout << "Species: " << Cat.Species << endl;
+			cout << "Name: " << Cat.Name << endl; 
 			cout << "Colour: " << Cat.Colour <<endl; 
 			cout << "Age: " << Cat.Age <<endl; 
 			cout << "Weight: " << Cat.Weight <<endl; 
@@ -94,7 +99,7 @@ int main(){
 			cout << "Invalid choice. Please try again" << endl;
 		}
 
-	}
+	} // Else If conditional statement again 
 	else if (choice == 2) {
 		int choice2;
 		cout << "Sub Menu" << endl;
@@ -112,12 +117,13 @@ int main(){
 			Dog.makeNoise();
 		}
 		else if (choice2 == 3) {
-			cout << "Details for" << Cat.Name << endl;
-			cout << "Species: " << Cat.Species << endl;
-			cout << "Colour: " << Cat.Colour << endl;
-			cout << "Age: " << Cat.Age << endl;
-			cout << "Weight: " << Cat.Weight << endl;
-			cout << "Noise: " << Cat.Noise << endl;
+			cout << "Details for the dog " << endl;
+			cout << "Species: " << Dog.Species << endl;
+			cout << "Name: " << Dog.Name << endl; 
+			cout << "Colour: " << Dog.Colour << endl;
+			cout << "Age: " << Dog.Age << endl;
+			cout << "Weight: " << Dog.Weight << endl;
+			cout << "Noise: " << Dog.Noise << endl;
 		}
 		else {
 			cout << "Invalid choice. Please try again" << endl;
@@ -126,5 +132,57 @@ int main(){
 	else {
 		cout << "Invalid choice. Please try again" << endl; 
 	}
+
+
+
+
+	// Creating another menu but this time using vectors
+	vector<Animal> animals_holder = { Cat, Dog};
+
+	int choice3;
+	cout << "Main menu" << endl;
+	cout << "Pick an animal" << endl;
+	//For loop to iterate through the vector, reads the value at the first index of 
+	for (int i = 0; i < animals_holder.size(); ++i) {
+		cout << i+1 << animals_holder[i].Name << endl;
+	}
+	cout << "Enter a number (1-2) to choose an animal: ";
+	cin >> choice3;
+
+	if (choice3 >= 1 && choice3 <= animals_holder.size()) {
+		int choice4; 
+		cout << "Sub Menu" << endl;
+		cout << "Pick an interaction" << endl;
+		cout << "1. Say Hello" << endl;
+		cout << "2. Make a noise" << endl;
+		cout << "3. View Details" << endl;
+		cout << "Enter a number (1-3) to pick an interaction: ";
+		cin >> choice4; 
+
+		// Same exact if condition loop like the last menu
+		if (choice4 == 1) {
+			// Access the animal object value at index "choice 3 - 1" in the "animal_holder vector"
+			// This is because the user choice starts from 1 but the vector starts from index 0
+			animals_holder[choice3 - 1].sayHello(); 
+		}
+		else if(choice4 == 2){
+			animals_holder[choice3 - 1].makeNoise();
+		}
+		else if (choice4 == 3) {
+			cout << "Details for the animal " << endl;
+			cout << "Species: " << animals_holder[choice4 - 1].Species << endl;
+			cout << "Name: " << animals_holder[choice4 - 1].Name << endl;
+			cout << "Colour: " << animals_holder[choice4 - 1].Colour << endl;
+			cout << "Age: " << animals_holder[choice4 - 1].Age << endl;
+			cout << "Weight: " << animals_holder[choice4 - 1].Weight << endl;
+			cout << "Noise: " << animals_holder[choice4 - 1].Noise << endl;
+		}
+		else {
+			cout << "Invalid choice. Please try again" << endl; 
+		} 
+
+	}
+
 	return 0; 
 }
+
