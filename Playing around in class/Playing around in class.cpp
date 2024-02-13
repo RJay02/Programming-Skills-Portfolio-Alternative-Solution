@@ -125,6 +125,7 @@ int main(){
 			cout << "Weight: " << Dog.Weight << endl;
 			cout << "Noise: " << Dog.Noise << endl;
 		}
+		//Error handling statement
 		else {
 			cout << "Invalid choice. Please try again" << endl;
 		}
@@ -137,52 +138,58 @@ int main(){
 
 
 	// Creating another menu but this time using vectors
-	vector<Animal> animals_holder = { Cat, Dog};
+	vector<Animal> animals_holder = {Cat, Dog};
 
 	int choice3;
 	cout << "Main menu" << endl;
 	cout << "Pick an animal" << endl;
-	//For loop to iterate through the vector, reads the value at the first index of 
-	for (int i = 0; i < animals_holder.size(); ++i) {
-		cout << i+1 << animals_holder[i].Name << endl;
-	}
+	cout << "1. Cat" << endl; 
+	cout << "2. Dog" << endl; 
 	cout << "Enter a number (1-2) to choose an animal: ";
 	cin >> choice3;
 
+	// Validate the user's choice to ensure it is within the valid range
+	// Without this statement I was getting an error that the vector size does 
+	// not have a valid range
 	if (choice3 >= 1 && choice3 <= animals_holder.size()) {
-		int choice4; 
+		int choice4;
 		cout << "Sub Menu" << endl;
 		cout << "Pick an interaction" << endl;
 		cout << "1. Say Hello" << endl;
 		cout << "2. Make a noise" << endl;
 		cout << "3. View Details" << endl;
 		cout << "Enter a number (1-3) to pick an interaction: ";
-		cin >> choice4; 
+		cin >> choice4;
 
-		// Same exact if condition loop like the last menu
-		if (choice4 == 1) {
-			// Access the animal object value at index "choice 3 - 1" in the "animal_holder vector"
-			// This is because the user choice starts from 1 but the vector starts from index 0
-			animals_holder[choice3 - 1].sayHello(); 
-		}
-		else if(choice4 == 2){
-			animals_holder[choice3 - 1].makeNoise();
-		}
-		else if (choice4 == 3) {
-			cout << "Details for the animal " << endl;
-			cout << "Species: " << animals_holder[choice4 - 1].Species << endl;
-			cout << "Name: " << animals_holder[choice4 - 1].Name << endl;
-			cout << "Colour: " << animals_holder[choice4 - 1].Colour << endl;
-			cout << "Age: " << animals_holder[choice4 - 1].Age << endl;
-			cout << "Weight: " << animals_holder[choice4 - 1].Weight << endl;
-			cout << "Noise: " << animals_holder[choice4 - 1].Noise << endl;
+		// Ensure the user's interaction choice is within the valid range to avoid any errors again
+		if (choice4 >= 1 && choice4 <= 3) {
+			// Access the animal object at index "choice3 - 1"
+			// Since user choice starts from 1 but vector indices start from 0,
+			// subtract 1 from the user choice to get the correct index.
+			if (choice4 == 1) {
+				animals_holder[choice3 - 1].sayHello();
+			}
+			else if (choice4 == 2) {
+				animals_holder[choice3 - 1].makeNoise();
+			}
+			else if (choice4 == 3) {
+				cout << "Details for the animal " << endl;
+				cout << "Species: " << animals_holder[choice3 - 1].Species << endl;
+				cout << "Name: " << animals_holder[choice3 - 1].Name << endl;
+				cout << "Colour: " << animals_holder[choice3 - 1].Colour << endl;
+				cout << "Age: " << animals_holder[choice3 - 1].Age << endl;
+				cout << "Weight: " << animals_holder[choice3 - 1].Weight << endl;
+				cout << "Noise: " << animals_holder[choice3 - 1].Noise << endl;
+			}
 		}
 		else {
-			cout << "Invalid choice. Please try again" << endl; 
-		} 
-
+			cout << "Invalid choice. Please try again" << endl;
+		}
+	}
+	else {
+		cout << "Invalid choice. Please try again" << endl;
 	}
 
-	return 0; 
+	return 0;
 }
 
