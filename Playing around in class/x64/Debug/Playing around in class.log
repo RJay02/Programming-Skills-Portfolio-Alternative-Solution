@@ -1,21 +1,2 @@
 ﻿  Playing around in class.cpp
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(49,7): error C2143: syntax error: missing ';' before '<<'
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(49,7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(49,7): error C2059: syntax error: '<<'
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(50,7): error C2143: syntax error: missing ';' before '<<'
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(50,7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(50,2): error C2086: 'int cout': redefinition
-  C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(49,2):
-  see declaration of 'cout'
-  
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(50,7): error C2059: syntax error: '<<'
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(51,7): error C2143: syntax error: missing ';' before '<<'
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(51,7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(51,2): error C2086: 'int cout': redefinition
-  C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(49,2):
-  see declaration of 'cout'
-  
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(51,7): error C2059: syntax error: '<<'
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(52,6): error C2143: syntax error: missing ';' before '>>'
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(52,6): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\Playing around in class.cpp(52,6): error C2059: syntax error: '>>'
+  Playing around in class.vcxproj -> C:\Users\rupes\Documents\UNI STUFF\Programming-Skills-Portfolio-Alternative-Solution\Playing around in class\x64\Debug\Playing around in class.exe
